@@ -1,3 +1,5 @@
+[![smithery badge](https://smithery.ai/badge/@guilhermelirio/homeassistant-mpc)](https://smithery.ai/server/@guilhermelirio/homeassistant-mpc)
+
 # Home Assistant MCP
 
 This is an MCP (Model Context Protocol) server that provides tools for integration with Home Assistant, allowing AI assistants to interact with smart home devices.
