@@ -1,0 +1,29 @@
+startCommand:
+  type: stdio
+  configSchema:
+    # JSON Schema defining the configuration options for the MCP.
+    type: object
+    required:
+      - homeAssistantToken
+      - homeAssistantUrl
+    properties:
+      homeAssistantToken:
+        type: string
+        description: Long-Lived Access Token for authenticating with Home Assistant
+      homeAssistantUrl:
+        type: string
+        description: Public URL of the Home Assistant instance
+  commandFunction:
+    # A JS function that produces the CLI command based on the given config to start the MCP on stdio.
+    |-
+    (config) => ({
+      command: 'node',
+      args: ['dist/index.js'],
+      env: {
+        HOME_ASSISTANT_TOKEN: config.homeAssistantToken,
+        HOME_ASSISTANT_URL: config.homeAssistantUrl
+      }
+    })
+  exampleConfig:
+    homeAssistantToken: your-home-assistant-token-here
+    homeAssistantUrl: your-home-assistant-url-here

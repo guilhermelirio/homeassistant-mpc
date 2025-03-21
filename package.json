@@ -1,0 +1,40 @@
+{
+  "name": "home-assistant-mcp",
+  "version": "0.1.0",
+  "description": "MCP server that integrates with Home Assistant API",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "bin": {
+    "home-assistant-mcp": "dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc && node -e \"require('fs').copyFileSync('.env', 'dist/.env')\"",
+    "start": "node dist/index.js",
+    "dev": "ts-node --esm src/index.ts",
+    "inspector": "npx @modelcontextprotocol/inspector dist/index.js",
+    "watch": "tsc --watch"
+  },
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "mcp",
+    "home-assistant"
+  ],
+  "author": "Guilherme Lirio Tomasi de Oliveira",
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.7.0",
+    "@types/express": "^5.0.1",
+    "axios": "^1.8.4",
+    "dotenv": "^16.4.7",
+    "express": "^5.0.1",
+    "zod": "^3.22.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "ts-node": "^10.9.0",
+    "typescript": "^5.0.0"
+  }
+}
