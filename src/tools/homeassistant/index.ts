@@ -107,7 +107,7 @@ export function registerHomeAssistantApiTools(server: McpServer) {
         return {
           content: [{ 
             type: "text",
-             text: `Name: ${response.attributes.friendly_name || "Unknown"}\nEntity: ${entity_id}\nState: ${response.state || "Unknown"}\nLast Updated: ${response.last_updated || "Unknown"}\n\nAttributes: ${JSON.stringify(response.attributes)}`
+             text: `Name: ${response[0].attributes.friendly_name || "Unknown"}\nEntity: ${entity_id}\nState: ${response[0].state || "Unknown"}\nLast Updated: ${response[0].last_updated || "Unknown"}\n\nAttributes: ${JSON.stringify(response[0].attributes)}`
           }]
         };
       }
