@@ -6,6 +6,15 @@ This is an MCP (Model Context Protocol) server that provides tools for integrati
 
 ## Setup
 
+### Installing via Smithery
+
+To install Home Assistant Integration for Claude Desktop automatically via [Smithery](https://smithery.ai/server/@guilhermelirio/homeassistant-mpc):
+
+```bash
+npx -y @smithery/cli install @guilhermelirio/homeassistant-mpc --client claude
+```
+
+### Manual Installation
 1. Install dependencies:
 
 ```bash
